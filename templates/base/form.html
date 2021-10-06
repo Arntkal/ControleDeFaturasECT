@@ -1,0 +1,18 @@
+{% extends "base/base-menu.html" %}
+{% block content %}
+
+<h1 class="h3 mb-2 text-gray-800">Envio de documento de Tarifas</h1>
+<p class="mb-4">Selecione o documento que será feita a verificação de Tarifas ECT</p>
+
+<form action="/" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Enviar" onclick="enviar()">
+</form>
+
+
+{% endblock %}
+
+{% block scripts %}
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base/base-menu.html" %}
+{% block content %}
+
+<h1 class="h3 mb-2 text-gray-800">Leitura de Valores</h1>
+<p class="mb-4">Preencha os campos para retornar os valores das postagens</p>
+
+<form action="/formTest/" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Enviar">
+</form>
+
+
+{% endblock %}
+
+{% block scripts %}
+
+{% endblock %}
