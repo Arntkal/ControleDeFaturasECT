@@ -31,4 +31,6 @@ class Tarifa(models.Model):
     rangeI4 = models.CharField(max_length=20)
     rangeI5 = models.CharField(max_length=20)
     rangeI6 = models.CharField(max_length=20)
-    
+
+    def __str__(self):              # __unicode__ on Python 2
+        return f"codEct : {self.idCodigoTarifa}, Peso: de {self.peso_I}gr a {self.peso_F}gr "
